@@ -5,6 +5,10 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: realistictreephysics
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,4 +34,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: RealisticTreePhysics-jar
-          path: build/libs/*.jar
+          path: realistictreephysics/build/libs/*.jar
